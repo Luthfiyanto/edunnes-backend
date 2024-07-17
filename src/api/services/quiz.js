@@ -1,4 +1,5 @@
 import { ApplicationError, generateApplicationError } from "../../libs/error.js";
+import * as userRepository from "../repositories/user.js";
 import * as quizRepository from "../repositories/quiz.js";
 import * as quizQuestionRepository from "../repositories/question.js";
 import * as quizSubmissionRepository from "../repositories/quiz_submission.js";
@@ -89,5 +90,24 @@ export async function getHistory(quiz_id, user_id) {
     return history;
   } catch (err) {
     throw generateApplicationError(err, "Error while getting quiz history", 500);
+  }
+}
+
+/**
+ * @param {string} attempt_id
+ * @param {string} user_id
+ */
+export async function getMySummaryQuiz(attempt_id, user_id) {
+  try {
+    const user = await userRepository.getUserById(user_id);
+    const quiz = await historyAttemptRepository.getHistoryAttemptsById(attempt_id);
+    if (user?.dataValues.role === "USER" && quiz?.dataValues.quiz.retake == false) {
+      const summary = await quizSubmissionRepository.getMyAnswerWithoutSummary(attempt_id);
+      return summary;
+    }
+    const summary = await historyAttemptRepository.getSummaryQuiz(attempt_id);
+    return summary;
+  } catch (err) {
+    throw generateApplicationError(err, "Error while getting quiz summary", 500);
   }
 }

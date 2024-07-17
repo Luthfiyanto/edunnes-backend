@@ -77,7 +77,6 @@ export async function getUnverifiedUserByEmail(email) {
 /** @param {Models.UserAttributes} payload */
 export async function createUser(payload) {
   const { email, password } = payload;
-  console.log(payload);
 
   const parsedPayload = omitPropertiesFromObject(payload, ["id", "verified", "password", "created_at", "updated_at"]);
   try {
