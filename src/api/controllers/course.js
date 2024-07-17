@@ -5,6 +5,9 @@ import { uploadCloudinary } from "../middlewares/upload.js";
 import { ApplicationError } from "../../libs/error.js";
 
 /**
+ * Get course in general
+ * (differentiated based on access rights to detailed data course)
+ *
  * @type {Types.Controller<typeof isLoggedIn>}
  * @returns {Promise<void>}
  */
@@ -28,6 +31,8 @@ export async function getCourses(req, res) {
 }
 
 /**
+ * Get course by id which will return the detail data course include chapter, material, and quiz
+ *
  * @type {Types.Controller<typeof isLoggedIn>}
  * @returns {Promise<void>}
  */
@@ -47,6 +52,8 @@ export async function getCourseById(req, res) {
 }
 
 /**
+ * Get all course which has been enrolled by user
+ *
  * @type {Types.AuthorizedController}
  * @returns {Promise<void>}
  */
@@ -66,6 +73,8 @@ export async function getUserCourses(req, res) {
 }
 
 /**
+ * Create new course
+ *
  * @type {Types.AuthorizedController<typeof uploadCloudinary>}
  * @returns {Promise<void>}
  */
@@ -91,6 +100,8 @@ export async function createCourse(req, res) {
 }
 
 /**
+ * Update existing course
+ *
  * @type {Types.AuthorizedController<typeof uploadCloudinary>}
  * @returns {Promise<void>}
  */
@@ -116,6 +127,7 @@ export async function updateCourse(req, res) {
 }
 
 /**
+ * Delete a course
  * @type {Types.AuthorizedController}
  * @returns {Promise<void>}
  */
@@ -135,6 +147,9 @@ export async function destroyCourse(req, res) {
 }
 
 /**
+ * Get a course with detailed data include chapter, material, content, quiz, and question
+ * It used to help admin during change the existing data to update course
+ *
  * @type {Types.AuthorizedController}
  * @returns {Promise<void>}
  */

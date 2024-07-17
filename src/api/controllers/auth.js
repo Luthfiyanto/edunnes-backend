@@ -94,6 +94,7 @@ export async function registerAdmin(req, res) {
 }
 
 /**
+ * Login controller by input email and password
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -124,42 +125,13 @@ export async function login(req, res) {
   }
 }
 
-// /**
-//  * @type {Types.Controller}
-//  * @returns {Promise<void>}
-//  */
-// export async function loginAsInstructor(req, res) {
-//   try {
-//     const { email, nip, password } = req.body;
-//     const instructor = email ? await instructorService.getInstructorByEmail(email) : await instructorService.getInstructorByNip(nip);
-
-//     const isMatch = await authService.isPasswordMatch(password, instructor.dataValues.password);
-
-//     if (!isMatch) {
-//       res.status(401).json({ message: "Password is not match" });
-//       return;
-//     }
-
-//     const token = await authService.generateToken(instructor.dataValues.id);
-
-//     /** @type {instructorModels.InstructorAttributes & {token:string}} */
-//     const instructorWithToken = { ...instructor.dataValues, token };
-
-//     res.status(200).json({ message: "Login success", data: instructorWithToken });
-//   } catch (err) {
-//     if (err instanceof ApplicationError) {
-//       res.status(err.statusCode).json({ message: err.message });
-//       return;
-//     }
-//     res.status(500).json({ message: "Internal server error" });
-//   }
-// }
-
 /**
  * OTP Verification
  */
 
 /**
+ * Sending otp verification code
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -181,6 +153,8 @@ export async function sendOtpRequest(req, res) {
 }
 
 /**
+ * Verifying otp code
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -199,6 +173,8 @@ export async function verifyOtp(req, res) {
 }
 
 /**
+ * Sending verification to reset password into email
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -219,6 +195,8 @@ export async function sendVerifyToResetPassword(req, res) {
 }
 
 /**
+ * checking the link which sent from email to reset password
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -239,6 +217,8 @@ export async function checkLinkToResetPassword(req, res) {
 }
 
 /**
+ * Change new password
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */

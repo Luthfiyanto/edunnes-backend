@@ -3,6 +3,8 @@ import * as Types from "../../libs/types/common.js";
 import { ApplicationError } from "../../libs/error.js";
 
 /**
+ * Get all categories
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -22,6 +24,8 @@ export async function getCourseCategories(_req, res) {
 }
 
 /**
+ * Create new category
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
@@ -41,6 +45,8 @@ export async function createCourseCategory(req, res) {
 }
 
 /**
+ * Delete a category
+ *
  * @type {Types.Controller}
  * @returns {Promise<void>}
  */
