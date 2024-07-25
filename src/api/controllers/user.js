@@ -3,6 +3,8 @@ import * as Types from "../../libs/types/common.js";
 import * as userService from "../services/user.js";
 
 /**
+ * Get all users
+ *
  * @type {Types.AuthorizedController}
  * @returns {void}
  */
@@ -21,6 +23,7 @@ export async function getAllUsers(req, res) {
 }
 
 /**
+ * Get all users where the role is instructor
  * @type {Types.Controller}
  * @returns {void}
  */
@@ -57,6 +60,8 @@ export async function getAllStudentsAndInstructor(req, res) {
 }
 
 /**
+ * Deactivate user's account
+ *
  * @type {Types.Controller}
  * @returns {void}
  */
@@ -76,6 +81,7 @@ export async function deactiveUser(req, res) {
 }
 
 /**
+ * Delete user's account
  * @type {Types.Controller}
  * @returns {void}
  */

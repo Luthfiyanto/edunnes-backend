@@ -4,6 +4,8 @@ import * as classService from "../services/classes.js";
 import * as Types from "../../libs/types/common.js";
 
 /**
+ * Register the class by user which need verification by admin then
+ *
  * @type {Types.Controller<typeof isAuthorized>}
  * @returns {void}
  */
@@ -25,6 +27,8 @@ export async function register(req, res) {
 }
 
 /**
+ * Get all class register data which the status is non-active
+ *
  * @type {Types.Controller}
  * @returns {void}
  */
@@ -42,6 +46,8 @@ export async function getAllUnActiveClassesStatus(req, res) {
 }
 
 /**
+ * Activate the registered class
+ *
  * @type {Types.Controller}
  * @returns {void}
  */
@@ -60,6 +66,8 @@ export async function activateClassStatus(req, res) {
 }
 
 /**
+ * Get all classes
+ *
  * @type {Types.Controller}
  * @returns {void}
  */
@@ -78,6 +86,8 @@ export async function getClasses(req, res) {
 }
 
 /**
+ * Get a class by id
+ *
  * @type {Types.Controller}
  * @returns {void}
  */
@@ -97,6 +107,8 @@ export async function getClassById(req, res) {
 }
 
 /**
+ * Get all classes which were registered for user
+ *
  * @type {Types.AuthorizedController}
  * @returns {void}
  */
@@ -116,6 +128,8 @@ export async function getUserClasses(req, res) {
 }
 
 /**
+ * Create new class
+ *
  * @type {Types.Controller<typeof isAuthorized>}
  * @returns {void}
  */
@@ -134,6 +148,7 @@ export async function createClass(req, res) {
 }
 
 /**
+ * Update data class
  * @type {Types.Controller}
  * @return {void}
  */
@@ -153,6 +168,7 @@ export async function updateClass(req, res) {
 }
 
 /**
+ * Delete a class
  * @type {Types.Controller}
  * @return {void}
  */

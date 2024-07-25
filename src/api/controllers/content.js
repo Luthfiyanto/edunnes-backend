@@ -4,6 +4,8 @@ import { isLoggedIn } from "../middlewares/auth.js";
 import { ApplicationError } from "../../libs/error.js";
 
 /**
+ * Get all contents based on material id
+ *
  * @type {Types.Controller<typeof isLoggedIn>}
  * @returns {Promise<void>}
  */

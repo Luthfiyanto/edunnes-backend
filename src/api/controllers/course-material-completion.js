@@ -3,6 +3,8 @@ import * as courseMaterialCompletionService from "../services/course-material-co
 import * as Types from "../../libs/types/common.js";
 
 /**
+ * Update course material progres
+ *
  * @type {Types.AuthorizedController}
  */
 export async function updateCourseMaterialCompletion(req, res) {

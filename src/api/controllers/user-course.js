@@ -3,6 +3,8 @@ import { ApplicationError } from "../../libs/error.js";
 import * as Types from "../../libs/types/common.js";
 
 /**
+ * Update attribute onboarded of a course and set material progres
+ *
  * @type {Types.AuthorizedController}
  * @returns {Promise<void>}
  */
