@@ -1,0 +1,1323 @@
+{
+	"info": {
+		"_postman_id": "752dee0f-ec10-403d-9c70-2bdb8e821a7a",
+		"name": "LMS-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31489020",
+		"_collection_link": "https://gold-trinity-929587.postman.co/workspace/Team-Workspace~afda4743-5961-4da5-824e-c3f714e67f69/collection/31489020-752dee0f-ec10-403d-9c70-2bdb8e821a7a?action=share&source=collection_link&creator=31489020"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "otp",
+					"item": [
+						{
+							"name": "request otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"iyandoang219@gmail.com\",\r\n    \"id\": \"8560a340-87f2-479b-ab83-51e68534d451\" //id user\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/otp",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"otp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "verify otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"saidgiono@gmail.com\",\r\n    \"otp\": \"725952\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/otp/verify",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"otp",
+										"verify"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "reset-password",
+					"item": [
+						{
+							"name": "reset-password",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/password-reset/fZMeQlnCW2Mm9O7_aL8dtZaE9ipg74lT",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"password-reset",
+										"fZMeQlnCW2Mm9O7_aL8dtZaE9ipg74lT"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"iyandoang219@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/password-reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"password-reset"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reset-password",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"token\": \"fZMeQlnCW2Mm9O7_aL8dtZaE9ipg74lT\",\r\n    \"password\": \"iyaniyan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/password-reset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"password-reset"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "register (user)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Slamet Sobri\",\r\n    \"email\": \"rohispmdh57@gmail.com\",\r\n    \"password\": \"slametslamet\",\r\n    \"image\": null,\r\n    \"phone_number\": \"+6281215216195\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register (instructor)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Lulu Farida Alfani\",\r\n    \"email\": \"lulufaridaalfani73@gmail.com\",\r\n    \"password\": \"lulufarida\",\r\n    \"image\": null,\r\n    \"phone_number\": \"+6285888832098\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/instructor/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"instructor",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register (admin)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Luthfiyanto\",\r\n    \"email\": \"luthfiyantooo@gmail.com\",\r\n    \"password\": \"luthfiey\",\r\n    \"image\": null,\r\n    \"phone_number\": \"+6282313735700\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/auth/admin/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"auth",
+										"admin",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "manage-user",
+					"item": [
+						{
+							"name": "get student and instructor",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2M1OTY1LTY2OTAtNGIxNS05NzIxLTgwZGM2ZDk1YTc2MiIsImlhdCI6MTcxNzQ4MjkwMCwiZXhwIjoxNzE3NTY5MzAwfQ.VBjYPpNpYq6L__aUAeVovvCz7JM-eHFRhQLSmX3UHB8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/manage-user/admin/users",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manage-user",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get All users by Super Admin only",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIzZDRkNWMxLTBkYmYtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcxNzQ5MTM5MSwiZXhwIjoxNzE3NTc3NzkxfQ.e8ftOxGoBDt7QzNO7s9rTyE22aNQlH0E8ALvP_-fy3g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/manage-user/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manage-user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deactivate account by SuperAdmin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIzZDRkNWMxLTBkYmYtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcxNzQ5MTM5MSwiZXhwIjoxNzE3NTc3NzkxfQ.e8ftOxGoBDt7QzNO7s9rTyE22aNQlH0E8ALvP_-fy3g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/manage-user/deactive/12ab32a3-d242-40be-8426-6a1b8d57700f",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manage-user",
+										"deactive",
+										"12ab32a3-d242-40be-8426-6a1b8d57700f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete account",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIzZDRkNWMxLTBkYmYtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcxNzQ5MTM5MSwiZXhwIjoxNzE3NTc3NzkxfQ.e8ftOxGoBDt7QzNO7s9rTyE22aNQlH0E8ALvP_-fy3g",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/manage-user/12ab32a3-d242-40be-8426-6a1b8d57700f",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"manage-user",
+										"12ab32a3-d242-40be-8426-6a1b8d57700f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"email\": \"iyandoang219@gmail.com\", // user or student\r\n    // \"password\": \"iyaniyan\"\r\n    // \"email\": \"lulufaridaalfani73@gmail.com\", // instructor\r\n    // \"password\": \"lulufarida\"\r\n    \"email\": \"luthfiyantooo@gmail.com\", // admin\r\n    \"password\": \"luthfiey\"\r\n    // \"email\": \"luthfiyanto1425@gmail.com\", // superadmin\r\n    // \"password\": \"luthfiyanto\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "course-categories",
+			"item": [
+				{
+					"name": "getCourseCategories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/course-categories",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCourseCategories",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Teknik Sastra Sansekerta\",\r\n    \"image\": \"https://source.unsplash.com/random\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/course-categories/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-categories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCourseCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/course-categories/1572e8e6-b6f4-4d5b-aad6-55281277f03b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-categories",
+								"1572e8e6-b6f4-4d5b-aad6-55281277f03b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "courses",
+			"item": [
+				{
+					"name": "get all course",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/courses/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get course by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcyMDE2NjY3MSwiZXhwIjoxNzIwMjUzMDcxfQ.JQJh5hqN7lz3l0xTQn3Mf-XoG6eFDt60JW91R_FUIKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/courses/5fc05d44-c4fa-4592-8a92-f7ad9dd70e73",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								"5fc05d44-c4fa-4592-8a92-f7ad9dd70e73"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all course by params",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNzA4NDcxNiwiZXhwIjoxNzE3MTcxMTE2fQ.LIzhmkdnm-jT5quWlph-KL4GYKVfmq3cUVH3P0YBVZY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/courses/?category=Algorithm and Data Structure",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								""
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Algorithm and Data Structure"
+								},
+								{
+									"key": "type",
+									"value": "premium",
+									"description": "free/premium",
+									"disabled": true
+								},
+								{
+									"key": "filter",
+									"value": "new",
+									"description": "new/popular/promo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNzQ3MzA3OSwiZXhwIjoxNzE3NTU5NDc5fQ.ABhTR4BpzexLhjo3zV4PEon1WuOet1uLjftPPglxdtQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Decision Support System\",\r\n    \"code\": \"uagddhi\",\r\n    \"price\": 350000,\r\n    \"rating\": 3.5,\r\n    \"premium\": true,\r\n    \"author_id\": \"643c5965-6690-4b15-9721-80dc6d95a762\",\r\n    \"instructors\": [\r\n        \"643c5965-6690-4b15-9721-80dc6d95a762\"\r\n    ],\r\n    \"course_category_id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\",\r\n    \"description\": \"Mempelajari tentang sistem pendukung keputusan untuk membantu menyelesaikan permasalahan pengambilan keputusan pada suatu organisasi atau perusahaan\",\r\n    \"target_audience\": [\r\n        \"Anda yang ingin mempelajari Sistem pendukung keputusan\",\r\n        \"Anda yang ingin memanajemen faktor-faktor pendukung keputusan\",\r\n        \"Anda yang ingin metode-metode untuk menerapkan SPK\"\r\n    ],\r\n    \"telegram\": \"https://t.me/sistem-pendukung-keputusan-Unnes/\"\r\n    // \"chapters\": [\r\n    //     {\r\n    //         \"name\": \"Pengenalan Sistem Pendukung Keputusan\",\r\n    //         \"duration\": 30,\r\n    //         \"order_index\": 1,\r\n    //         \"materials\": [\r\n    //             {\r\n    //                 \"name\": \"Apa itu SPK?\",\r\n    //                 \"order_index\": 1,\r\n    //                 \"is_public\": true,\r\n    //                 \"contents\": [\r\n    //                     {\r\n    //                         \"label\": \"definition\",\r\n    //                         \"order_index\": 1,\r\n    //                         \"type\": \"text\",\r\n    //                         \"heading\": \"Definisi Sistem\",\r\n    //                         \"content\": \"Lorem ipsum dolor amet sit\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"label\": \"Intro video\",\r\n    //                         \"order_index\": 2,\r\n    //                         \"type\": \"video\",\r\n    //                         \"url\": \"https://youtube.com/bahbbdvsay\",\r\n    //                         \"heading\": \"Whats the module\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"label\": \"learning method\",\r\n    //                         \"order_index\": 3,\r\n    //                         \"type\": \"text\",\r\n    //                         \"heading\": \"learning method\",\r\n    //                         \"content\": \"Lorem ipsum dolor amet sit abjdbahdugvgcfgevhbcakncjnaknjcen\"\r\n    //                     }\r\n    //                 ]\r\n    //             }\r\n    //         ],\r\n    //         \"quizzes\": [\r\n    //             {\r\n    //                 \"title\": \"Pretest\",\r\n    //                 \"description\": \"Menguji pengetahuan mahasiswa mengenai pengantar SPK\",\r\n    //                 \"is_public\": true,\r\n    //                 \"order_index\": 4,\r\n    //                 \"retake\": true,\r\n    //                 \"questions\": [\r\n    //                     {\r\n    //                         \"label\": \"first question\",\r\n    //                         \"question\": \"Whats is SPK?\",\r\n    //                         \"options\": [\r\n    //                             \"SPK is SPK\",\r\n    //                             \"SPK is just system\",\r\n    //                             \"SPK is a decision making support system\"\r\n    //                         ],\r\n    //                         \"correct_option\": \"SPK is a decision making support system\",\r\n    //                         \"summary\": \"SPK is a decision making support system\"\r\n    //                     }\r\n    //                 ]\r\n    //             }\r\n    //         ]\r\n    //     }\r\n    // ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/courses/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNzQ3MzA3OSwiZXhwIjoxNzE3NTU5NDc5fQ.ABhTR4BpzexLhjo3zV4PEon1WuOet1uLjftPPglxdtQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Decision Support System\",\r\n    \"code\": \"uagddhi\",\r\n    \"price\": 350000,\r\n    \"rating\": 3.5,\r\n    \"premium\": true,\r\n    \"author_id\": \"643c5965-6690-4b15-9721-80dc6d95a762\",\r\n    \"instructors\": [\r\n        \"643c5965-6690-4b15-9721-80dc6d95a762\"\r\n        \r\n    ],\r\n    \"course_category_id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\",\r\n    \"description\": \"Mempelajari tentang sistem pendukung keputusan untuk membantu menyelesaikan permasalahan pengambilan keputusan pada suatu organisasi atau perusahaan\",\r\n    \"target_audience\": [\r\n        \"Anda yang ingin mempelajari Sistem pendukung keputusan\",\r\n        \"Anda yang ingin memanajemen faktor-faktor pendukung keputusan\",\r\n        \"Anda yang ingin metode-metode untuk menerapkan SPK\"\r\n    ],\r\n    \"telegram\": \"https://t.me/sistem-pendukung-keputusan-Unnes/\",\r\n    \"chapters\": [\r\n    //     {\r\n    //         \"id\": \"cf66e367-2968-482d-8899-554fc967620a\",\r\n    //         \"name\": \"Pengenalan Sistem Pendukung Keputusan\",\r\n    //         \"duration\": 30,\r\n    //         \"order_index\": 1,\r\n    //         \"materials\": [\r\n    //             {\r\n    //                 \"id\": \"d9b317bf-b769-4317-9c84-b5c17ae75915\",\r\n    //                 \"name\": \"Apa itu SPK?\",\r\n    //                 \"order_index\": 1,\r\n    //                 \"is_public\": false,\r\n    //                 \"contents\": [\r\n    //                     {\r\n    //                         \"id\": \"c2de137f-32a1-42ee-bb0d-8711c65be943\",\r\n    //                         \"label\": \"definition\",\r\n    //                         \"order_index\": 1,\r\n    //                         \"type\": \"text\",\r\n    //                         \"heading\": \"Definisi Sistem\",\r\n    //                         \"content\": \"Lorem ipsum dolor amet sit\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"id\": \"d61152da-a82f-4ff0-9ec7-530dd3c56f32\",\r\n    //                         \"label\": \"Intro video\",\r\n    //                         \"order_index\": 2,\r\n    //                         \"type\": \"video\",\r\n    //                         \"url\": \"https://youtube.com/bahbbdvsay\",\r\n    //                         \"heading\": \"Whats the module\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"id\": \"35c8e789-75b2-4af8-95ba-a6ca9e5d0037\",\r\n    //                         \"label\": \"learning method\",\r\n    //                         \"order_index\": 3,\r\n    //                         \"type\": \"text\",\r\n    //                         \"heading\": \"learning method\",\r\n    //                         \"content\": \"Lorem ipsum dolor amet sit abjdbahdugvgcfgevhbcakncjnaknjcen\"\r\n    //                     }\r\n    //                 ]\r\n    //             }\r\n    //         ],\r\n    //         \"quizzes\": [\r\n    //             {\r\n    //                 \"id\": \"1353eace-9693-4cb3-b310-1e648b70f5f2\",\r\n    //                 \"title\": \"Pretest\",\r\n    //                 \"description\": \"Menguji pengetahuan mahasiswa mengenai pengantar SPK\",\r\n    //                 \"is_public\": true,\r\n    //                 \"order_index\": 4,\r\n    //                 \"retake\": true,\r\n    //                 \"questions\": [\r\n    //                     {\r\n    //                         \"id\": \"f8b38b22-e9c9-4005-9708-3f660b3ddeea\",\r\n    //                         \"label\": \"first question\",\r\n    //                         \"question\": \"Whats is SPK?\",\r\n    //                         \"options\": [\r\n    //                             \"SPK is SPK\",\r\n    //                             \"SPK is just system\",\r\n    //                             \"SPK is a decision making support system\"\r\n    //                         ],\r\n    //                         \"correct_option\": \"SPK is a decision making support system\",\r\n    //                         \"summary\": \"SPK is a decision making support system\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"label\": \"second question\",\r\n    //                         \"question\": \"Mention the incorrect method in SPK?\",\r\n    //                         \"options\": [\r\n    //                             \"TOPSIS\",\r\n    //                             \"WP\",\r\n    //                             \"nothing\"\r\n    //                         ],\r\n    //                         \"correct_option\": \"nothing\",\r\n    //                         \"summary\": \"SPK is a decision making support system\"\r\n    //                     }\r\n    //                 ]\r\n    //             }\r\n    //         ]\r\n    //     },\r\n    //     {\r\n    //         \"name\": \"Metode Sistem Pendukung Keputusan\",\r\n    //         \"duration\": 50,\r\n    //         \"order_index\": 2,\r\n    //         \"materials\": [\r\n    //             {\r\n    //                 \"name\": \"Metode TOPSIS?\",\r\n    //                 \"order_index\": 1,\r\n    //                 \"is_public\": false,\r\n    //                 \"contents\": [\r\n    //                     {\r\n    //                         \"label\": \"definition\",\r\n    //                         \"order_index\": 1,\r\n    //                         \"type\": \"text\",\r\n    //                         \"heading\": \"Definisi TOPSIS\",\r\n    //                         \"content\": \"Lorem ipsum dolor amet sit\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"label\": \"Intro video\",\r\n    //                         \"order_index\": 2,\r\n    //                         \"type\": \"video\",\r\n    //                         \"url\": \"https://youtube.com/bahbbdvsay\",\r\n    //                         \"heading\": \"Whats TOPSIS\"\r\n    //                     },\r\n    //                     {\r\n    //                         \"label\": \"Advantage of using TOPSIS\",\r\n    //                         \"order_index\": 3,\r\n    //                         \"type\": \"text\",\r\n    //                         \"heading\": \"Advantage of using TOPSIS\",\r\n    //                         \"content\": \"Lorem ipsum dolor amet sit abjdbahdugvgcfgevhbcakncjnaknjcen\"\r\n    //                     }\r\n    //                 ]\r\n    //             }\r\n    //         ],\r\n    //         \"quizzes\": [\r\n    //             {\r\n    //                 \"title\": \"Pretest\",\r\n    //                 \"description\": \"Menguji pengetahuan mahasiswa mengenai metode TOPSIS\",\r\n    //                 \"is_public\": true,\r\n    //                 \"order_index\": 4,\r\n    //                 \"retake\": true,\r\n    //                 \"questions\": [\r\n    //                     {\r\n    //                         \"label\": \"first question\",\r\n    //                         \"question\": \"Whats is SPK?\",\r\n    //                         \"options\": [\r\n    //                             \"SPK is SPK\",\r\n    //                             \"SPK is just system\",\r\n    //                             \"SPK is a decision making support system\"\r\n    //                         ],\r\n    //                         \"correct_option\": \"SPK is a decision making support system\",\r\n    //                         \"summary\": \"SPK is a decision making support system\"\r\n    //                     }\r\n    //                 ]\r\n    //             }\r\n    //         ]\r\n    //     }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/courses/2f717027-06fa-45a9-93e2-90a7d7e29b8d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								"2f717027-06fa-45a9-93e2-90a7d7e29b8d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNTM5MzczNSwiZXhwIjoxNzE1NDgwMTM1fQ.AtEstBbx_wWBDQgmfFFZY_A2fC-kg17arGhpNJxBJ2s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/courses/9e2d6728-41a4-4523-8344-ea073ced9a3f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								"9e2d6728-41a4-4523-8344-ea073ced9a3f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get My active course",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcxOTU0NTM0MywiZXhwIjoxNzE5NjMxNzQzfQ.8dyOBkCcsnEPkbQg5bx9s9nRSLIe-5b4GnX-WP-mcbk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/courses/me",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get course preview data (for update needs only)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIzZDRkNWMxLTBkYmYtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcxNzQ5MTM5MSwiZXhwIjoxNzE3NTc3NzkxfQ.e8ftOxGoBDt7QzNO7s9rTyE22aNQlH0E8ALvP_-fy3g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/courses/preview-data/c63a172f-4eb1-44b2-8c90-66336b016d8f",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"courses",
+								"preview-data",
+								"c63a172f-4eb1-44b2-8c90-66336b016d8f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "quizzes",
+			"item": [
+				{
+					"name": "get question by quiz id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcyMDE2NjY3MSwiZXhwIjoxNzIwMjUzMDcxfQ.JQJh5hqN7lz3l0xTQn3Mf-XoG6eFDt60JW91R_FUIKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/quiz/dddd0be4-9cf6-492d-a174-19c75806a54b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quiz",
+								"dddd0be4-9cf6-492d-a174-19c75806a54b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit quiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcyMDE2NjY3MSwiZXhwIjoxNzIwMjUzMDcxfQ.JQJh5hqN7lz3l0xTQn3Mf-XoG6eFDt60JW91R_FUIKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"attempt\": {\r\n        \"submissions\": [\r\n            {\r\n                \"question_id\": \"dd5764c8-6faf-477e-bbf9-07ba08e0d3d0\",\r\n                \"answer\": \"Urutan langkah-langkah untuk membuat program\"\r\n            },\r\n            {\r\n                \"question_id\": \"93a629ac-6c3c-4670-8e1f-28d91471ce9a\",\r\n                // \"answer\": \"Diagram yang digunakan untuk mendeskripsikan algoritma\" // correct sample\r\n                \"answer\": \"Diagram yang digunakan untuk mendeskripsikan website\" // wrong sample\r\n            }\r\n        ],\r\n        \"attempted_at\": \"Mon Jul 01 2024 11:21:57 GMT+0700 (Western Indonesia Time)\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/quiz/submit/dddd0be4-9cf6-492d-a174-19c75806a54b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quiz",
+								"submit",
+								"dddd0be4-9cf6-492d-a174-19c75806a54b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get history quiz",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcyMDE2NjY3MSwiZXhwIjoxNzIwMjUzMDcxfQ.JQJh5hqN7lz3l0xTQn3Mf-XoG6eFDt60JW91R_FUIKY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/quiz/history/dddd0be4-9cf6-492d-a174-19c75806a54b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"quiz",
+								"history",
+								"dddd0be4-9cf6-492d-a174-19c75806a54b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contents",
+			"item": [
+				{
+					"name": "get content by material id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/content/44769daf-9a68-4a71-8b45-c2f620d3cdd4",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"content",
+								"44769daf-9a68-4a71-8b45-c2f620d3cdd4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "classes",
+			"item": [
+				{
+					"name": "class",
+					"item": [
+						{
+							"name": "get all classes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/class",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get class by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/class/d93cd605-ac4e-4f87-9dad-8547b63c0cb5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"d93cd605-ac4e-4f87-9dad-8547b63c0cb5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new class",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNjc5NDA4MSwiZXhwIjoxNzE2ODgwNDgxfQ.mOv5xKLq6-N_t7gR9MGScr3rOFueO9XfFgjM1PUhGGA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Algorithm and Data Structure Class\",\r\n    \"description\": \"Master the fundamentals of algorithms and data structures to design efficient and scalable software solutions.\",\r\n    \"image\": \"https://www.example.com/algorithm.jpg\",\r\n    \"schedule\": \"Monday, Wednesday, Friday 10:00 - 12:00\",\r\n    \"quota\": 30,\r\n    \"duration\": 6, // in month\r\n    \"registration_deadline\": \"2024-08-30T00:00:00.000Z\",\r\n    \"instructor_id\": \"12ab32a3-d242-40be-8426-6a1b8d57700f\",\r\n    \"course_category_id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/class",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update class",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNjM1OTY4MywiZXhwIjoxNzE2NDQ2MDgzfQ.khGzegJ_-VmrEW-13BfG05s0BTfhvFZD1eagmMrSdDQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Back Bootcamp Class\",\r\n    \"description\": \"Belajar dasar-dasar javascript untuk menjadi frontend web developer\",\r\n    \"image\": null,\r\n    \"schedule\": \"Senin, 10.00\",\r\n    \"instructor_id\": \"12ab32a3-d242-40be-8426-6a1b8d57700f\",\r\n    \"course_category_id\": \"d290f1ee-6c54-4b01-90e6-d701748f0851\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/class/9bb5c99b-77d1-413c-a679-d0b10d61885e",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"9bb5c99b-77d1-413c-a679-d0b10d61885e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete class",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNjM1OTY4MywiZXhwIjoxNzE2NDQ2MDgzfQ.khGzegJ_-VmrEW-13BfG05s0BTfhvFZD1eagmMrSdDQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/class/9bb5c99b-77d1-413c-a679-d0b10d61885e",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"9bb5c99b-77d1-413c-a679-d0b10d61885e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get my class",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcxOTM2ODc5OSwiZXhwIjoxNzE5NDU1MTk5fQ.bgRs-d77CKl8nkNVGEncU9-CucVQF4ZXifZFhTkHh9k",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/class/me",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"me"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "status",
+					"item": [
+						{
+							"name": "register class",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjBkYmY2Y2FlLWIzZDQtNGE4NS1hZGVjLTVjOTJjYTgwYWNjZSIsImlhdCI6MTcyMjI1OTcxOCwiZXhwIjoxNzIyMzQ2MTE4fQ.GlraeB0FGE0oaULtjkjkuh9n2vmx4GzAteQQ7XbDJT4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"class_id\": \"4eedf085-bda8-4224-946a-9428007869dd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/class/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get user class registration",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2M1OTY1LTY2OTAtNGIxNS05NzIxLTgwZGM2ZDk1YTc2MiIsImlhdCI6MTcyMjMwODU0MSwiZXhwIjoxNzIyMzk0OTQxfQ.4nyEPoiHUzc5lZNz_XP3p3wL0xXRUU6Y6mZOHEis4wQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/class/status/pending",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"status",
+										"pending"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "activate user class by admin",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0M2M1OTY1LTY2OTAtNGIxNS05NzIxLTgwZGM2ZDk1YTc2MiIsImlhdCI6MTcyMjMwODU0MSwiZXhwIjoxNzIyMzk0OTQxfQ.4nyEPoiHUzc5lZNz_XP3p3wL0xXRUU6Y6mZOHEis4wQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"81cebd77-0a4a-4f6b-91f7-a7e3e5a33188\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/class/status/activate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"class",
+										"status",
+										"activate"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user-course",
+			"item": [
+				{
+					"name": "update course onboarding",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNjc5NDA4MSwiZXhwIjoxNzE2ODgwNDgxfQ.mOv5xKLq6-N_t7gR9MGScr3rOFueO9XfFgjM1PUhGGA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user-courses/65826153-6ae1-466b-90b0-853e3f2ebb65",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user-courses",
+								"65826153-6ae1-466b-90b0-853e3f2ebb65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update course material progress",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyYWIzMmEzLWQyNDItNDBiZS04NDI2LTZhMWI4ZDU3NzAwZiIsImlhdCI6MTcxNjc5NDA4MSwiZXhwIjoxNzE2ODgwNDgxfQ.mOv5xKLq6-N_t7gR9MGScr3rOFueO9XfFgjM1PUhGGA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"percentage\": 90\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/course-material-completion/12aab0f0-7ff7-424d-879d-7f9331241e89",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"course-material-completion",
+								"12aab0f0-7ff7-424d-879d-7f9331241e89"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "instructor",
+			"item": [
+				{
+					"name": "get All instructors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/instructor",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"instructor"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}",
+					"host": [
+						"{{base_url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://lms-be-lggdbttiza-as.a.run.app/"
+		}
+	]
+}
